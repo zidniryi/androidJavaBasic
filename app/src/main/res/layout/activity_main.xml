@@ -69,8 +69,17 @@
         android:id="@+id/button_move"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pindah"
+        android:text="Moving"
         android:background="@color/colorPrimaryDark"
         android:textColor="#FFF"/>
+    <Button
+        android:id="@+id/button_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:text="Passing Data"
+        />
 </LinearLayout>
 </ScrollView>

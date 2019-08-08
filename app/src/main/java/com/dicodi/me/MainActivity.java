@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText edtWidth, edtHeight, edtLength;
     private Button btnCalculate;
     private TextView tvResult;
+    String bio = "Selalu ada jalan untuk melakukan hal lebih baik, temukan itu";
 
 
     @Override
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button buttonMove =  findViewById(R.id.button_move);
+        Button buttonData = findViewById(R.id.button_data);
 
         edtWidth = findViewById(R.id.edt_width);
         edtHeight = findViewById(R.id.edt_height);
@@ -35,6 +37,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View v) {
                 Intent moveIntent = new Intent(MainActivity.this, MoveActivity.class);
                 startActivity(moveIntent);
+            }
+        });
+        buttonData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moveData = new Intent(MainActivity.this, DataActivity.class);
+                moveData.putExtra(DataActivity.EXTRA_NAME, "Zidniryi");
+                moveData.putExtra(DataActivity.EXTRA_AGE, 19);
+                moveData.putExtra(DataActivity.EXTRA_BIO, bio);
+                startActivity(moveData);
             }
         });
 

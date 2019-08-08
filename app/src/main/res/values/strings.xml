@@ -9,4 +9,5 @@
     <string name="width" />
     <string name="result" />
     <string name="length" />
+    <string name="data_received" />
 </resources>
