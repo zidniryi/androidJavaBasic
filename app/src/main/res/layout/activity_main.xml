@@ -81,5 +81,12 @@
         android:textColor="#FFF"
         android:text="Passing Data"
         />
+    <Button
+        android:id="@+id/button_dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="dial"
+        />
 </LinearLayout>
 </ScrollView>

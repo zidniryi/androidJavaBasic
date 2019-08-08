@@ -1,6 +1,7 @@
 package com.dicodi.me;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Button buttonMove =  findViewById(R.id.button_move);
         Button buttonData = findViewById(R.id.button_data);
+        Button buttonDial = findViewById(R.id.button_dial);
 
         edtWidth = findViewById(R.id.edt_width);
         edtHeight = findViewById(R.id.edt_height);
@@ -47,6 +49,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 moveData.putExtra(DataActivity.EXTRA_AGE, 19);
                 moveData.putExtra(DataActivity.EXTRA_BIO, bio);
                 startActivity(moveData);
+            }
+        });
+        buttonDial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phonNumber = "083844164133";
+                Intent dial = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phonNumber));
+                startActivity(dial);
             }
         });
 
