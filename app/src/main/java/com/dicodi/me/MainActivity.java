@@ -1,5 +1,6 @@
 package com.dicodi.me;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,10 +15,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnCalculate;
     private TextView tvResult;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button buttonMove =  findViewById(R.id.button_move);
 
         edtWidth = findViewById(R.id.edt_width);
         edtHeight = findViewById(R.id.edt_height);
@@ -26,8 +29,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvResult = findViewById(R.id.tv_result);
 
         btnCalculate.setOnClickListener(this);
-    }
 
+        buttonMove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moveIntent = new Intent(MainActivity.this, MoveActivity.class);
+                startActivity(moveIntent);
+            }
+        });
+
+    }
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_calculate) {
@@ -78,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
+
 
     private Double toDouble(String str) {
         try {
