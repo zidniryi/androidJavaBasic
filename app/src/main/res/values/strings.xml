@@ -5,4 +5,8 @@
     <string name="tinggi">Tinggi</string>
     <string name="calculate">Calculate</string>
     <string name="hasil">Hasil</string>
+    <string name="height" />
+    <string name="width" />
+    <string name="result" />
+    <string name="length" />
 </resources>
