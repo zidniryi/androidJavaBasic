@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Double toDouble(String str) {
         try {
-            return Double.valueOf(str)
+            return Double.valueOf(str);
         }
         catch (NumberFormatException e){
             return  null;
