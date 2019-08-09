@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonMove =  findViewById(R.id.button_move);
         Button buttonData = findViewById(R.id.button_data);
         Button buttonDial = findViewById(R.id.button_dial);
+        Button buttonLayout = findViewById(R.id.button_layout);
+        Button buttonProduk = findViewById(R.id.button_produk);
 
         edtWidth = findViewById(R.id.edt_width);
         edtHeight = findViewById(R.id.edt_height);
@@ -59,7 +61,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(dial);
             }
         });
+        buttonProduk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moveLayout = new Intent(MainActivity.this, MainLayout.class);
+                startActivity(moveLayout);
 
+            }
+        });
+
+        buttonLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moveProduk =  new Intent(MainActivity.this, Produk.class);
+                startActivity(moveProduk);
+            }
+        });
     }
     @Override
     public void onClick(View v) {

@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DataActivity"></activity>
+        <activity android:name=".Produk"></activity>
+        <activity
+            android:name=".MainLayout"
+            android:label="@string/title_activity_main_layout"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DataActivity" />
         <activity android:name=".MoveActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
