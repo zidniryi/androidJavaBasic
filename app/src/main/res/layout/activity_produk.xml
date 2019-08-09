@@ -162,7 +162,8 @@
                 android:layout_toRightOf="@id/img_profile"
                 android:text="Zidniryi"
                 android:textColor="@android:color/black"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                style="@style/TextKu"/>
 
         </RelativeLayout>
         <Button
@@ -172,6 +173,7 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
+            style="@style/ButtonKu"
             />
     </TableLayout>
 </LinearLayout>
