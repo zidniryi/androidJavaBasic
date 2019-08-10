@@ -16,9 +16,12 @@ import java.util.ArrayList;
 //To show how data showing
 public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListViewHolder> {
     private ArrayList<Hero> listHero;
-    public  ListHeroAdapter(ArrayList<Hero> list){
 
+    public ListHeroAdapter(ArrayList<Hero> list) {
+        this.listHero = list;
     }
+
+
     @NonNull
     @Override
     public ListViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
@@ -27,14 +30,12 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-     Hero hero = listHero.get(position);
+    public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
+        Hero hero = listHero.get(position);
         Glide.with(holder.itemView.getContext())
-        .load(hero.getPhoto())
+                .load(hero.getPhoto())
                 .apply(new RequestOptions().override(55, 55))
-//                Get from lass ListViewHolder
                 .into(holder.imgPhoto);
-
         holder.tvName.setText(hero.getName());
         holder.tvFrom.setText(hero.getFrom());
     }
@@ -44,12 +45,11 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListVi
         return listHero.size();
     }
 
-    public class ListViewHolder extends RecyclerView.ViewHolder {
+    class ListViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
         TextView tvName, tvFrom;
-        public ListViewHolder(@NonNull View itemView) {
+        ListViewHolder(View itemView) {
             super(itemView);
-//            Get from xml
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             tvName = itemView.findViewById(R.id.tv_item_name);
             tvFrom = itemView.findViewById(R.id.tv_item_from);

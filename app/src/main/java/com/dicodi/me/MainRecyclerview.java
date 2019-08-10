@@ -15,18 +15,15 @@ public class MainRecyclerview extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_recyclerview);
-        if(getSupportActionBar() != null){
-            getSupportActionBar().setTitle("Hello World");
 
-            rvHeroes = findViewById(R.id.rv_hero);
-            rvHeroes.setHasFixedSize(true);
+        rvHeroes = findViewById(R.id.rv_hero);
+        rvHeroes.setHasFixedSize(true);
 
-            list.addAll(HeroesData.getListData());
-            showRecyclerList();
-        }
+        list.addAll(HeroesData.getListData());
+        showRecyclerList();
     }
 
-    private void showRecyclerList() {
+    private void showRecyclerList(){
         rvHeroes.setLayoutManager(new LinearLayoutManager(this));
         ListHeroAdapter listHeroAdapter = new ListHeroAdapter(list);
         rvHeroes.setAdapter(listHeroAdapter);

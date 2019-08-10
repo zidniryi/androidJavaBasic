@@ -1,9 +1,9 @@
 package com.dicodi.me;
 
 public class Hero {
-    public String name;
-    public String from;
-    public String photo;
+    private String name;
+    private String from;
+    private String photo;
 
     public String getName() {
         return name;
