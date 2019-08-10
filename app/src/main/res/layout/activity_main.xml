@@ -93,7 +93,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Layout"
+        android:text="Layout diferent"
         />
     <Button
         android:id="@+id/button_produk"
@@ -101,6 +101,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Layout"
+        />
+    <Button
+        android:id="@+id/button_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FFFFFF"
         />
 </LinearLayout>
 </ScrollView>

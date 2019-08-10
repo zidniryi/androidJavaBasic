@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Produk"></activity>
+        <activity android:name=".MainRecyclerview"></activity>
+        <activity android:name=".Produk" />
         <activity
             android:name=".MainLayout"
             android:label="@string/title_activity_main_layout"

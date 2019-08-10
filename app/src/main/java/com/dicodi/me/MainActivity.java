@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonDial = findViewById(R.id.button_dial);
         Button buttonLayout = findViewById(R.id.button_layout);
         Button buttonProduk = findViewById(R.id.button_produk);
+        Button buttonRecyclerView = findViewById(R.id.button_recyclerview);
 
         edtWidth = findViewById(R.id.edt_width);
         edtHeight = findViewById(R.id.edt_height);
@@ -67,6 +68,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent moveLayout = new Intent(MainActivity.this, MainLayout.class);
                 startActivity(moveLayout);
 
+            }
+        });
+        buttonRecyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moveRecyclerView = new Intent(MainActivity.this, MainRecyclerview.class);
+                startActivity(moveRecyclerView);
             }
         });
 
